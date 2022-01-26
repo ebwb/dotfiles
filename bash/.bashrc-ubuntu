@@ -1,0 +1,4 @@
+# BEGIN EBWB ZONE
+unset command_not_found_handle
+set VISUAL=emacs
+set EDITOR="$VISUAL"

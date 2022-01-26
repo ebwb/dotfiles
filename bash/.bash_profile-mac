@@ -1,0 +1,9 @@
+#!/bin/bash
+
+USER_DIR="/Users/ebernard"
+export VISUAL=emacs
+export PATH=${PATH}:$USER_DIR/scratch # the home for my little utilites
+
+source "$USER_DIR/.git-completion.bash"
+source "$USER_DIR/.git-prompt.sh"
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
