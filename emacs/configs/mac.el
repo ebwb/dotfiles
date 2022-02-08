@@ -25,7 +25,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("melpa stable" . "https://stable.melpa.org/packages/")))
  '(package-selected-packages
-   '(flycheck-clj-kondo rainbow-delimiters use-package markdown-mode which-key paredit cider company clojure-mode)))
+   '(flycheck-clj-kondo rainbow-delimiters use-package markdown-mode which-key cider company clojure-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
