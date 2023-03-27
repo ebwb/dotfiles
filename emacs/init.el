@@ -11,6 +11,20 @@
 (add-hook 'clojure-mode-hook #'flycheck-mode)
 (add-hook 'clojure-mode-hook #'cider-mode)
 
+;; perl stuff
+;; Use cperl-mode instead of the default perl-mode
+(add-to-list 'auto-mode-alist '("\\.\\([pP][Llm]\\|al\\)\\'" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl5" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("miniperl" . cperl-mode))
+
+(add-hook 'cperl-mode-hook 'n-cperl-mode-hook t)
+(defun n-cperl-mode-hook ()
+  (setq cperl-indent-level 4)
+  (setq cperl-continued-statement-offset 0)
+  (setq cperl-extra-newline-before-brace t)
+  )
+
 ;; rust-specific stuff
 ;(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 ;(add-hook 'rust-mode-hook
@@ -84,7 +98,8 @@
 (use-package org-mode
   :bind (("C-c i e" . org-insert-example)
 	 ("C-c i s" . org-insert-src)
-	 ("C-c i q" . org-isnert-quote))
+	 ("C-c i q" . org-isnert-quote)
+	 ("C-c i r" . org-clock-report))
   :config)
 
 ;; my emacs ergonomics
@@ -136,4 +151,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(cider-test-failure-face ((t (:background "salmon")))))
+ '(cider-test-failure-face ((t (:background "salmon"))))
+ '(cperl-array-face ((t (:background "black" :foreground "LightGoldenrod1" :weight bold))))
+ '(cperl-hash-face ((t (:background "black" :foreground "salmon1" :slant italic :weight bold)))))
