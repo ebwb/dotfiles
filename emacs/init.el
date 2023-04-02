@@ -145,6 +145,7 @@
  '(package-selected-packages
    '(lsp-metals scala-mode magit flycheck-clj-kondo rainbow-delimiters use-package markdown-mode which-key cider company clojure-mode))
  '(sql-port 2484)
+ '(tool-bar-mode nil)
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
